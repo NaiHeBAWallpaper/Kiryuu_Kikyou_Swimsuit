@@ -1,18 +1,57 @@
 {
 	"contentrating" : "Everyone",
-	"description" : "A live2D web wallpaper for Blue Archive.",
+	"description" : "[h1][b] A live2D web wallpaper for Blue Archive [/b][/h1]\r\n\r\n[hr][/hr]\r\n\r\n[h1]Custom Features[/h1]\r\n\r\n[list]\r\n [*][b]Scale[/b]\r\n [*][b]Target FPS[/b]\r\n [*][b]Intro Animation[/b]\r\n [*][b]Dialog[/b]\r\n [*][b]Headpatting[/b]\r\n [*][b]Mouse Tracking[/b] (Eye Movement Following Cursor)\r\n [*][b]Fireworks Effect[/b] on Mouse Click\r\n [*][b]Background Music (BGM)[/b]\r\n [*][b]Voiceline Volume Control[/b]\r\n [/list]\r\n\r\nSupports dialog text in [b]Japanese[/b], [b]English[/b], and [b]Simplified Chinese[/b].\r\n\r\n[hr][/hr]\r\n\r\n[h1]Implementation[/h1]\r\n\r\n[list]\r\n [*]Uses [url=https://github.com/EsotericSoftware/spine-runtimes]spine-webgl[/url] to render Spine models\r\n [*]Uses [url=https://github.com/nihui/realcugan-ncnn-vulkan]realcugan-ncnn-vulkan[/url] for 4x upscaling (8192×8192) of model textures\r\n [/list]\r\n\r\n[hr][/hr]\r\n\r\n[h1]Thanks[/h1]\r\n [url=https://steamcommunity.com/workshop/filedetails/?id=2956165539]https://steamcommunity.com/workshop/filedetails/?id=2956165539[/url]\r\n\r\n[hr][/hr]\r\n\r\n[h1]Copyright[/h1]\r\n\r\n[quote]Blue Archive is a registered trademark of NAT GAMES Co., Ltd., NEXON Korea Corp., and Yostar, Inc.\r\n This project is not affiliated with, endorsed by, or connected to NAT GAMES Co., Ltd., NEXON Korea Corp., NEXON GAMES Co., Ltd., IODivision, Yostar, Inc., or any of their subsidiaries or affiliates.\r\n All game assets, content, and materials are copyrighted by their respective owners and are used for informational and educational purposes only.[/quote]",
 	"file" : "index.html",
 	"general" : 
 	{
 		"properties" : 
 		{
+			"modelresolution" : 
+			{
+				"index": 18,
+				"options": [
+					{
+						"label": "2K",
+						"value": "2k"
+					},
+					{
+						"label": "4K",
+						"value": "4k"
+					},
+					{
+						"label": "8K",
+						"value": "8k"
+					}
+				],
+				"order": 118,
+				"text": "Model Resolution",
+				"type": "combo",
+				"value": "8k"
+			},
+			"bapointer" : 
+			{
+				"index": 16,
+				"order": 116,
+				"text": "BA Pointer Style",
+				"type": "bool",
+				"value": true
+			},
+			"bapersistenttrail" : 
+			{
+				"condition": "fireworks.value == true && bapointer.value == true",
+				"index": 17,
+				"order": 117,
+				"text": "BA Pointer Persistent Trail",
+				"type": "bool",
+				"value": false
+			},
 			"bgmvolume" : 
 			{
 				"fraction" : false,
-				"index" : 11,
+				"index" : 12,
 				"max" : 100,
 				"min" : 0,
-				"order" : 111,
+				"order" : 112,
 				"text" : "BGM Volume",
 				"type" : "slider",
 				"value" : 20
@@ -45,10 +84,10 @@
 			{
 				"condition" : "mouseactions.value == true && voicelines.value == true && showdialog.value == true",
 				"fraction" : true,
-				"index" : 7,
+				"index" : 8,
 				"max" : 100,
 				"min" : 0,
-				"order" : 107,
+				"order" : 108,
 				"precision" : 2,
 				"step" : 0.1,
 				"text" : "DialogX",
@@ -59,10 +98,10 @@
 			{
 				"condition" : "mouseactions.value == true && voicelines.value == true && showdialog.value == true",
 				"fraction" : true,
-				"index" : 8,
+				"index" : 9,
 				"max" : 100,
 				"min" : 0,
-				"order" : 108,
+				"order" : 109,
 				"precision" : 2,
 				"step" : 0.1,
 				"text" : "DialogY",
@@ -82,13 +121,13 @@
 			{
 				"index" : 13,
 				"order" : 113,
-				"text" : "Fireworks Effect",
+				"text" : "Click Effects",
 				"type" : "bool",
 				"value" : true
 			},
 			"fireworkstheme" : 
 			{
-				"condition" : "fireworks.value == true",
+				"condition" : "fireworks.value == true && bapointer.value == false",
 				"index" : 14,
 				"options" : 
 				[
@@ -113,8 +152,8 @@
 			"headpatting" : 
 			{
 				"condition" : "mouseactions.value == true",
-				"index" : 9,
-				"order" : 109,
+				"index" : 10,
+				"order" : 110,
 				"text" : "Headpatting",
 				"type" : "bool",
 				"value" : true
@@ -138,8 +177,8 @@
 			"mousetracking" : 
 			{
 				"condition" : "mouseactions.value == true",
-				"index" : 10,
-				"order" : 110,
+				"index" : 11,
+				"order" : 111,
 				"text" : "Mouse Tracking",
 				"type" : "bool",
 				"value" : true
@@ -209,15 +248,15 @@
 			}
 		}
 	},
-	"preview" : "preview.jpg",
+	"preview" : "preview.gif",
 	"ratingsex" : "none",
 	"ratingviolence" : "none",
-	"snapshotformat" : -1,
+	"snapshotformat" : 4,
 	"snapshotoverlay" : "",
 	"tags" : [ "Anime" ],
 	"title" : "Blue Archive | Kiryuu Kikyou (Swimsuit)",
-	"type" : "Web",
-	"version" : 7,
+	"type" : "web",
+	"version" : 10,
 	"visibility" : "public",
 	"workshopid" : "3510454414",
 	"workshopurl" : "steam://url/CommunityFilePage/3510454414"
