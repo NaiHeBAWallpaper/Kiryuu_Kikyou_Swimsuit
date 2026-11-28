@@ -43,7 +43,8 @@ const subtitleLocales = {
 	Chinese: 'zh-Hans',
 	TraditionalChinese: 'zh-Hant',
 	Japanese: 'ja',
-	Korean: 'ko'
+	Korean: 'ko',
+	Thai: 'th'
 };
 
 const CHARACTER = 'CH0300';
@@ -63,14 +64,14 @@ const AUDIO_DETAIL = [
 				"ほら、存分に楽しんで。"
 			],
 			English: [
-				"How is it? Not bad, right?",
-				"I made it just for today.",
-				"Come on, enjoy it to the fullest."
+				"How is it? Quite nice, right?",
+				"I built it for you.",
+				"So enjoy to your heart's content."
 			],
 			Chinese: [
 				"怎么样？还不错吧？",
-				"为了今天特别制作的。",
-				"来吧，尽情享受吧。"
+				"这是我特意为今天做的哦。",
+				"希望你能尽情享受。"
 			],
 			TraditionalChinese: [
 				"怎麼樣？還不賴吧？",
@@ -81,36 +82,38 @@ const AUDIO_DETAIL = [
 				"어때? 꽤나 좋지 않아?",
 				"오늘을 위해 만들어 봤지.",
 				"마음껏 즐겨줬으면 좋겠어."
-			]
+			],
+			Thai: ["เป็นยังไงล่ะ? ใช้ได้เลยใช่มั้ย?","ฉันถักมันไว้ เพื่อวันนี้เลย","หวังว่า คุณจะสนุกให้เต็มที่เลยนะ"]
 		}
 	},
 	{
 		dialog: {
 			Japanese: [
 				"実は……全部、初めてなんだ。",
-				"何かを作っている時、誰かの顔が、ずっと浮かぶのも。",
-				"無防備の姿を、誰かに見せるのも"
+				"何かを作っているとき、誰かの顔がずっと浮かぶのも。",
+				"無防備な姿を、誰かに見せるのも。"
 			],
 			English: [
-				"Actually... this is all my first time.",
-				"When I'm making something, someone's face keeps appearing in my mind.",
-				"And showing my defenseless side to someone."
+				"To confess... This was a first for me.",
+				"To be thinking of someone while creating something.",
+				"And to lower my defenses so completely in front of someone."
 			],
 			Chinese: [
-				"其实……这一切，都是第一次。",
-				"不论是在制作时有谁的身影在脑海中挥之不去。",
-				"还是向人展露毫无防备的姿态。"
+				"其实……这些都是第一次。",
+				"无论是在做某个东西时，有个人的脸庞一直浮现在眼前……",
+				"还是让别人看到自己这样毫无防备的样子。"
 			],
 			TraditionalChinese: [
 				"其實……這全部，都是第一次。",
-				"不論是在製作時有誰的身影在腦海中揮之不去。",
-				"還是向人展露毫無防備的姿態。"
+				"無論是在製作東西的時候，一直浮現某個人的臉……",
+				"還是把毫無防備的模樣，展現給某個人看。"
 			],
 			Korean: [
 				"사실…… 처음이야.",
-				"내가 무언가를 만들 때, 누군가의 얼굴이 내 머릿속에 계속 나타납니다.",
-				"그리고 누군가에게 내 무방비한 면을 보여줬다."
-			]
+				"뭔가를 만들며 그 사람의 얼굴이 계속 떠오른 것도.",
+				"이렇게 무방비한 모습을 다른 사람에게 보이는 것도."
+			],
+			Thai: ["ที่จริง... นี่เป็นครั้งแรกเลยละ","ที่ฉันทำอะไร แล้วนึกถึงหน้าของ ใครบางคนตลอดเลย","รวมถึงการให้ใครได้เห็น ฉันที่ผ่อนคลายแบบนี้ด้วย"]
 		}
 	},
 	{
@@ -119,17 +122,18 @@ const AUDIO_DETAIL = [
 				"別に……誰とまでは言わないけど。"
 			],
 			English: [
-				"It's not like... I'll say who it is though."
+				"I will not...specify who, though."
 			],
 			Chinese: [
-				"具体是谁……我才不会说。"
+				"我就……不指名道姓那个人是谁啦。"
 			],
 			TraditionalChinese: [
 				"雖然……我沒打算連是誰都說出來就是了。"
 			],
 			Korean: [
 				"딱히…… 누구라고까지는 말하지는 않겠지만."
-			]
+			],
+			Thai: ["ฉันจะ... ไม่บอกหรอกนะ ว่าคนคนนั้นคือใคร"]
 		}
 	},
 	{
@@ -139,12 +143,12 @@ const AUDIO_DETAIL = [
 				"あんたの隣は、私が守るから。"
 			],
 			English: [
-				"...Stay by my side from now on too.",
-				"I'll protect what's next to you."
+				"...Please continue to stay by my side.",
+				"And I shall stay by yours."
 			],
 			Chinese: [
-				"……以后也要陪伴在我身边。",
-				"你，就由我来守护。"
+				"……以后也请一直陪在我身边吧。",
+				"我也会一直守护在你身边的。"
 			],
 			TraditionalChinese: [
 				"……今後也待在我身邊吧。",
@@ -153,7 +157,8 @@ const AUDIO_DETAIL = [
 			Korean: [
 				"……앞으로도 내 곁에 있어 줘.",
 				"나도 항상 당신의 곁을 지킬 테니까."
-			]
+			],
+			Thai: ["แต่ต่อไปก็ช่วยอยู่ข้างๆ ฉันด้วยนะ...","ฉันเองก็จะคอยปกป้องคุณ อยู่ข้างๆ เหมือนกัน"]
 		}
 	},
 	{
@@ -162,17 +167,18 @@ const AUDIO_DETAIL = [
 				"……この同盟は、永遠だからね。"
 			],
 			English: [
-				"...This alliance of ours is eternal."
+				"...This alliance is eternal."
 			],
 			Chinese: [
-				"……我们之间的同盟，永恒不变。"
+				"……这份盟约，会永远延续下去。"
 			],
 			TraditionalChinese: [
 				"……這個同盟，是永恆的哦。"
 			],
 			Korean: [
 				"……이 동맹은, 영원한 거야."
-			]
+			],
+			Thai: ["พันธมิตรของเรา จะไม่มีวันเสื่อมคลายนะ..."]
 		}
 	}
 ];
@@ -284,7 +290,7 @@ function playVoiceline() {
 			track.play().catch(finish);
 
 			if (dialogBox) {
-				textbox.textContent = dialog[window.selectedLanguage][index];
+				textbox.textContent = getSubtitleText(dialog, window.selectedLanguage, index);
 				textbox.style.opacity = 1;
 			}
 		},
@@ -454,6 +460,16 @@ function setMouse(event) {
 	return { x: ax - canvas.width * positionX, y: ay - canvas.height * positionY };
 }
 
+function getSubtitleText(dialog, language, index) {
+	let text = dialog?.[language]?.[index];
+	if (text == null && language === 'Thai') {
+		language = 'English';
+		text = dialog?.[language]?.[index];
+	}
+	textbox.lang = subtitleLocales[language];
+	return text ?? "";
+}
+
 function updateSubtitleLanguage() {
 	let language = subtitleLanguagePreference;
 	if (language === 'auto') {
@@ -467,6 +483,8 @@ function updateSubtitleLanguage() {
 			language = 'Japanese';
 		} else if (primary === 'ko' || primary === 'korean' || primary === 'koreana') {
 			language = 'Korean';
+		} else if (primary === 'th' || primary === 'thai') {
+			language = 'Thai';
 		} else {
 			language = 'English';
 		}
@@ -476,7 +494,7 @@ function updateSubtitleLanguage() {
 	window.selectedLanguage = language;
 	textbox.lang = subtitleLocales[language];
 	const clip = currentTracks.at(-1);
-	if (dialogBox && clip) textbox.textContent = clip.dialog[language][clip.index];
+	if (dialogBox && clip) textbox.textContent = getSubtitleText(clip.dialog, language, clip.index);
 }
 
 function init() {
